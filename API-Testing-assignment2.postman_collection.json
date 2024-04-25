@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "cb96939e-a612-418c-a81d-0096fdcca829",
+		"name": "API-Testing-assignment2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34074241"
+	},
+	"item": [
+		{
+			"name": "status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url3}}",
+					"host": [
+						"{{url3}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url3}}/books",
+					"host": [
+						"{{url3}}"
+					],
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url3}}/books/3",
+					"host": [
+						"{{url3}}"
+					],
+					"path": [
+						"books",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orders",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "bb85919640e039b01241b1883f70bd8bb4352c924ccc6d2f04f23f1eefa4ba22",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\": 5,\r\n    \"customerName\": \"sadiaaa\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url3}}/orders",
+					"host": [
+						"{{url3}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrdersWithID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "bb85919640e039b01241b1883f70bd8bb4352c924ccc6d2f04f23f1eefa4ba22",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url3}}/orders/OsQfO1QoEp0Nd5grVMm5d",
+					"host": [
+						"{{url3}}"
+					],
+					"path": [
+						"orders",
+						"OsQfO1QoEp0Nd5grVMm5d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrdersDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "bb85919640e039b01241b1883f70bd8bb4352c924ccc6d2f04f23f1eefa4ba22",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url3}}/orders",
+					"host": [
+						"{{url3}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PatchOrders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "bb85919640e039b01241b1883f70bd8bb4352c924ccc6d2f04f23f1eefa4ba22",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"FtE8jI7h2IOGbxvKqCe2V\",\r\n    \"bookId\": 2,\r\n    \"customerName\": \"Sadi Bhai\",\r\n    \"createdBy\": \"44e7aa18b97964865f20903b03dc13b74fe613f1771020a4016efd71a770a91e\",\r\n    \"quantity\": 1,\r\n    \"timestamp\": 1714022012752\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url3}}/orders/FtE8jI7h2IOGbxvKqCe2V",
+					"host": [
+						"{{url3}}"
+					],
+					"path": [
+						"orders",
+						"FtE8jI7h2IOGbxvKqCe2V"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteOrders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "bb85919640e039b01241b1883f70bd8bb4352c924ccc6d2f04f23f1eefa4ba22",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "cookie",
+						"value": "token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url3}}/orders/FtE8jI7h2IOGbxvKqCe2V",
+					"host": [
+						"{{url3}}"
+					],
+					"path": [
+						"orders",
+						"FtE8jI7h2IOGbxvKqCe2V"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api-clients",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"clientName\": \"SadiaAlam\",\r\n    \"clientEmail\": \"sadiaa@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url3}}/api-clients/",
+					"host": [
+						"{{url3}}"
+					],
+					"path": [
+						"api-clients",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
